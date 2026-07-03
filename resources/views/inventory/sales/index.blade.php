@@ -28,6 +28,7 @@
                                 <td class="py-3 text-sm">${{ number_format($sale->total_amount, 2) }}</td>
                                 <td class="py-3 text-sm space-x-2">
                                     <a href="{{ route('sales.show', $sale) }}" class="text-blue-600 hover:underline">View</a>
+                                    <a href="{{ route('sales.edit', $sale) }}" class="text-blue-600 hover:underline">Edit</a>
                                     <form action="{{ route('sales.destroy', $sale) }}" method="POST" class="inline" onsubmit="return confirm('Delete this sale?')">@csrf @method('DELETE')<button type="submit" class="text-red-600 hover:underline">Delete</button></form>
                                 </td>
                             </tr>

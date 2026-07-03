@@ -9,7 +9,10 @@
                     <div><dt class="text-sm font-medium text-gray-500">Date</dt><dd class="text-sm text-gray-900">{{ $sale->sale_date->format('Y-m-d') }}</dd></div>
                     @if($sale->notes)<div class="col-span-2"><dt class="text-sm font-medium text-gray-500">Notes</dt><dd class="text-sm text-gray-900">{{ $sale->notes }}</dd></div>@endif
                 </dl>
-                <div class="mt-4"><a href="{{ route('sales.index') }}" class="px-4 py-2 border rounded-md hover:bg-gray-50 inline-block">Back</a></div>
+                <div class="mt-4 space-x-2">
+                    <a href="{{ route('sales.edit', $sale) }}" class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 inline-block">Edit</a>
+                    <a href="{{ route('sales.index') }}" class="px-4 py-2 border rounded-md hover:bg-gray-50 inline-block">Back</a>
+                </div>
             </div>
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg p-6">
                 <h3 class="text-lg font-medium text-gray-900 mb-4">Items</h3>
